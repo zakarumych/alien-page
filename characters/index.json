@@ -1,0 +1,16 @@
+[
+  { "file": "characters/suit.yaml", "name": "Adrienne Castellan", "career": "Company Liaison — Executive Overseer", "lang": "EN" },
+  { "file": "characters/suit.ru.yaml", "name": "Адриенн Кастеллан", "career": "Представитель компании — исполнительный куратор", "lang": "RU" },
+  { "file": "characters/captain.yaml", "name": "Marcus Ijeoma", "career": "Ship Captain", "lang": "EN" },
+  { "file": "characters/captain.ru.yaml", "name": "Маркус Иджеома", "career": "Капитан судна", "lang": "RU" },
+  { "file": "characters/security-officer.yaml", "name": "Talia Reyes", "career": "Security Officer", "lang": "EN" },
+  { "file": "characters/security-officer.ru.yaml", "name": "Талия Рейес", "career": "Офицер безопасности", "lang": "RU" },
+  { "file": "characters/technician.yaml", "name": "Grant Okafor", "career": "Chief Technician", "lang": "EN" },
+  { "file": "characters/technician.ru.yaml", "name": "Грант Окафор", "career": "Старший техник", "lang": "RU" },
+  { "file": "characters/medic.yaml", "name": "Priya Anand", "career": "Medical Officer", "lang": "EN" },
+  { "file": "characters/medic.ru.yaml", "name": "Прия Ананд", "career": "Медик", "lang": "RU" },
+  { "file": "characters/scientist.yaml", "name": "Dr. Felix Novak", "career": "Science Officer", "lang": "EN" },
+  { "file": "characters/scientist.ru.yaml", "name": "Доктор Феликс Новак", "career": "Научный офицер", "lang": "RU" },
+  { "file": "characters/worker.yaml", "name": "Denny Whitlock", "career": "Roustabout — General Labor", "lang": "EN" },
+  { "file": "characters/worker.ru.yaml", "name": "Денни Уитлок", "career": "Разнорабочий — «подай-принеси»", "lang": "RU" }
+]

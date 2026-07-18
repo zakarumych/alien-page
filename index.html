@@ -177,6 +177,38 @@
     font-family:'Oswald',sans-serif; text-transform:uppercase; font-size:11px;
   }
 
+  .roster-divider{
+    max-width:560px;margin:22px auto 14px;
+    display:flex; align-items:center; gap:10px;
+    color:var(--dim); font-size:10.5px; letter-spacing:0.15em; text-transform:uppercase;
+  }
+  .roster-divider::before, .roster-divider::after{
+    content:""; flex:1; height:1px; background:var(--line);
+  }
+  .roster{
+    max-width:560px; margin:0 auto;
+    display:grid; grid-template-columns:1fr 1fr; gap:8px;
+  }
+  @media(max-width:600px){.roster{grid-template-columns:1fr;}}
+  .roster-empty{
+    grid-column:1/-1; color:var(--dim); font-size:11.5px; font-style:italic; text-align:center;
+  }
+  .roster-card{
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    background:var(--panel); border:1px solid var(--line);
+    padding:9px 12px; cursor:pointer; text-align:left;
+    font-family:'Share Tech Mono', monospace; color:var(--white);
+    transition:border-color .15s, background .15s;
+  }
+  .roster-card:hover{ border-color:var(--amber); background:var(--panel-alt); }
+  .roster-card .rc-info{ min-width:0; }
+  .roster-card .rc-name{ font-size:12.5px; letter-spacing:0.02em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .roster-card .rc-career{ font-size:10.5px; color:var(--dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .roster-card .rc-lang{
+    flex-shrink:0; font-family:'Oswald',sans-serif; font-size:9.5px; letter-spacing:0.1em;
+    color:var(--amber-dim); border:1px solid var(--line-bright); padding:2px 5px;
+  }
+
   .error-msg{
     max-width:560px;margin:14px auto 0;
     border:1px solid var(--danger);
@@ -413,6 +445,11 @@
     </div>
 
     <div class="error-msg" id="errorMsg"></div>
+
+    <div class="roster-divider"><span>OR PULL FROM CREW ROSTER</span></div>
+    <div class="roster" id="roster">
+      <div class="roster-empty" id="rosterEmpty">Scanning local registry…</div>
+    </div>
 
     <div class="spec-toggle">
       <button id="specBtn">View expected record format</button>
@@ -959,6 +996,32 @@ notes: >
     document.getElementById('errorMsg').classList.remove('show');
   }
 
+  function loadFromText(text){
+    let data;
+    try{
+      data = parseRecord(text);
+    }catch(err){
+      showError('RECORD CORRUPTED — could not parse file contents.');
+      return;
+    }
+    if(!data.name){
+      showError('NO SUBJECT NAME FOUND — record must include a top-level "name:" field.');
+      return;
+    }
+    document.getElementById('intro-block').querySelector('.intro').style.display = 'none';
+    document.getElementById('dropzone').style.display = 'none';
+    document.querySelector('.roster-divider').style.display = 'none';
+    document.getElementById('roster').style.display = 'none';
+    document.querySelector('.spec-toggle').style.display = 'none';
+    document.getElementById('specBox').classList.remove('show');
+    runBoot(data.name, function(){
+      document.getElementById('boot').classList.remove('show');
+      document.getElementById('intro-block').style.display = 'none';
+      renderSheet(data);
+      document.getElementById('sheet').classList.add('show');
+    });
+  }
+
   function handleFile(file){
     clearError();
     if(!file){ return; }
@@ -968,29 +1031,7 @@ notes: >
       return;
     }
     const reader = new FileReader();
-    reader.onload = function(e){
-      let data;
-      try{
-        data = parseRecord(e.target.result);
-      }catch(err){
-        showError('RECORD CORRUPTED — could not parse file contents.');
-        return;
-      }
-      if(!data.name){
-        showError('NO SUBJECT NAME FOUND — record must include a top-level "name:" field.');
-        return;
-      }
-      document.getElementById('intro-block').querySelector('.intro').style.display = 'none';
-      document.getElementById('dropzone').style.display = 'none';
-      document.querySelector('.spec-toggle').style.display = 'none';
-      document.getElementById('specBox').classList.remove('show');
-      runBoot(data.name, function(){
-        document.getElementById('boot').classList.remove('show');
-        document.getElementById('intro-block').style.display = 'none';
-        renderSheet(data);
-        document.getElementById('sheet').classList.add('show');
-      });
-    };
+    reader.onload = (e)=> loadFromText(e.target.result);
     reader.onerror = function(){
       showError('COULD NOT READ FILE — please try again.');
     };
@@ -1013,11 +1054,45 @@ notes: >
     handleFile(file);
   });
 
+  // ---------- Crew roster (fetched from characters/index.json, served alongside the page) ----------
+  function loadRoster(){
+    const rosterEl = document.getElementById('roster');
+    fetch('characters/index.json')
+      .then(r=>{ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(list=>{
+        if(!Array.isArray(list) || list.length === 0){
+          rosterEl.innerHTML = '<div class="roster-empty">No crew records on file.</div>';
+          return;
+        }
+        rosterEl.innerHTML = '';
+        list.forEach(entry=>{
+          const card = document.createElement('button');
+          card.type = 'button';
+          card.className = 'roster-card';
+          card.innerHTML = `<span class="rc-info"><span class="rc-name">${esc(entry.name || entry.file)}</span><br><span class="rc-career">${esc(entry.career || '')}</span></span>${entry.lang ? `<span class="rc-lang">${esc(entry.lang)}</span>` : ''}`;
+          card.addEventListener('click', ()=>{
+            clearError();
+            fetch(entry.file)
+              .then(r=>{ if(!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+              .then(text=> loadFromText(text))
+              .catch(()=> showError('COULD NOT LOAD RECORD — "' + entry.file + '" is unreachable.'));
+          });
+          rosterEl.appendChild(card);
+        });
+      })
+      .catch(()=>{
+        rosterEl.innerHTML = '<div class="roster-empty">Crew registry unreachable — serve this page over HTTP to browse it.</div>';
+      });
+  }
+  loadRoster();
+
   document.getElementById('resetBtn').addEventListener('click', function(){
     document.getElementById('sheet').classList.remove('show');
     document.getElementById('intro-block').style.display = 'block';
     document.getElementById('intro-block').querySelector('.intro').style.display = 'block';
     document.getElementById('dropzone').style.display = 'block';
+    document.querySelector('.roster-divider').style.display = 'flex';
+    document.getElementById('roster').style.display = 'grid';
     document.querySelector('.spec-toggle').style.display = 'block';
     fileInput.value = '';
     clearError();
