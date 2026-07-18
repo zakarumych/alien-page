@@ -30,9 +30,8 @@ conditions:
   Exhausted: no
   Freezing: no
 
-talent:
-  name: Jury-Rig
-  description: >
+talents:
+  Jury-Rig: >
     Once per scene, Okafor can repair broken equipment using only scrap
     and his multitool, ignoring one missing required part.
 

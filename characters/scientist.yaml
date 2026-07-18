@@ -30,9 +30,8 @@ conditions:
   Exhausted: no
   Freezing: no
 
-talent:
-  name: Hyper Fixated
-  description: >
+talents:
+  Hyper Fixated: >
     Once per scene, Novak may reroll a failed Observation or Comtech
     check related to whatever he's currently studying.
 

@@ -31,9 +31,8 @@ conditions:
   Exhausted: no
   Freezing: no
 
-talent:
-  name: Combat Medic
-  description: >
+talents:
+  Combat Medic: >
     Treating a Critical Injury under fire only takes a Fast Action
     instead of a Slow Action for Anand.
 

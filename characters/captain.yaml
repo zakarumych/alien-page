@@ -31,9 +31,8 @@ conditions:
   Exhausted: no
   Freezing: no
 
-talent:
-  name: Steady Hand
-  description: >
+talents:
+  Steady Hand: >
     When pushing a Piloting roll during an emergency maneuver or combat,
     Ijeoma pays no Stress point for the push.
 

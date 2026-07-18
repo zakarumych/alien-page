@@ -34,9 +34,8 @@ conditions:
   Exhausted: yes
   Freezing: no
 
-talent:
-  name: Rapid Fire
-  description: >
+talents:
+  Rapid Fire: >
     Once per round, Cassidy can fire a second burst from an automatic
     weapon as a Fast Action instead of a Slow Action.
 

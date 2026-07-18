@@ -30,9 +30,8 @@ conditions:
   Exhausted: no
   Freezing: no
 
-talent:
-  name: Rapid Response
-  description: >
+talents:
+  Rapid Response: >
     Once per scene, when combat breaks out unexpectedly, Reyes may act
     immediately regardless of normal initiative order.
 

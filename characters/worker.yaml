@@ -30,9 +30,8 @@ conditions:
   Exhausted: no
   Freezing: no
 
-talent:
-  name: Fresh Eyes
-  description: >
+talents:
+  Fresh Eyes: >
     Once per session, Whitlock may reroll a failed skill check for a
     task he's never attempted before — beginner's luck.
 
