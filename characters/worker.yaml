@@ -22,7 +22,7 @@ health:
   max: 4
 
 stress:
-  current: 2
+  current: 0
 
 conditions:
   Starving: no

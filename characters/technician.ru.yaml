@@ -23,7 +23,7 @@ health:
   max: 3
 
 stress:
-  current: 2
+  current: 0
 
 conditions:
   Голод: no
