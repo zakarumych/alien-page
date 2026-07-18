@@ -1,0 +1,63 @@
+name: Denny Whitlock
+career: Roustabout — General Labor
+appearance: >
+  Barely twenty, wiry, sunburned neck, coveralls a size too big rolled at
+  the cuffs, always moving before anyone finishes asking him to.
+
+attributes:
+  Strength: 4
+  Agility: 4
+  Wits: 2
+  Empathy: 4
+
+skills:
+  Heavy Machinery: 2
+  Mobility: 2
+  Stamina: 3
+  Observation: 1
+  Survival: 1
+
+health:
+  current: 4
+  max: 4
+
+stress:
+  current: 2
+
+conditions:
+  Starving: no
+  Dehydrated: no
+  Exhausted: no
+  Freezing: no
+
+talent:
+  name: Fresh Eyes
+  description: >
+    Once per session, Whitlock may reroll a failed skill check for a
+    task he's never attempted before — beginner's luck.
+
+agenda: >
+  Didn't expect to draw the short straw for a seventeen-month callout
+  this early in his contract. Just wants to fix whatever's broken on
+  LV-845, collect the hazard pay, and get back in the pod.
+
+buddy: Grant Okafor
+rival: Dr. Felix Novak
+
+sigitem: >
+  A cracked photo of his family, folded small and kept in his breast
+  pocket.
+
+gear:
+  - Work gloves
+  - Multitool
+  - Spare coveralls
+  - Cheap handheld radio
+  - Energy bars
+
+cash: 40 credits
+
+notes: >
+  Youngest on board by a decade. Okafor's the only one who bothers
+  explaining things twice. Novak treats him like spare lab hands, which
+  he's noticed.

@@ -1,0 +1,67 @@
+name: Ellen Cassidy
+portrait: https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop
+career: Colonial Marine — Heavy Weapons Specialist
+appearance: >
+  Broad-shouldered, buzzed hair going grey at the temples, a jagged scar
+  above one eyebrow from a Rim colony riot. Wears her fatigues a size too
+  big and never bothers to fix it.
+
+attributes:
+  Strength: 5
+  Agility: 3
+  Wits: 3
+  Empathy: 2
+
+skills:
+  Heavy Machinery: 3
+  Observation: 2
+  Mobility: 2
+  Ranged Combat: 4
+  Close Combat: 2
+  Stamina: 3
+  Survival: 1
+
+health:
+  current: 7
+  max: 9
+
+stress:
+  current: 4
+
+conditions:
+  Starving: no
+  Dehydrated: no
+  Exhausted: yes
+  Freezing: no
+
+talent:
+  name: Rapid Fire
+  description: >
+    Once per round, Cassidy can fire a second burst from an automatic
+    weapon as a Fast Action instead of a Slow Action.
+
+agenda: >
+  Get her squad off this rock alive — she's already lost one team to a
+  bug hunt gone wrong and isn't burying another.
+
+buddy: Corporal Nkemelu
+rival: Sergeant Voss
+
+sigitem: >
+  A dented Zippo lighter engraved with her sister's initials, carried
+  since basic training.
+
+gear:
+  - M41A Pulse Rifle
+  - Ammo Belt (3 spare mags)
+  - Frag grenades x2
+  - Motion Tracker
+  - Combat knife
+  - Flashlight
+
+cash: 340 credits
+
+notes: >
+  Cassidy volunteered for this deployment after her previous unit was
+  declared MIA near LV-426. Company liaison flagged her file for
+  "elevated risk tolerance."

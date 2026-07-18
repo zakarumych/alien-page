@@ -1,0 +1,63 @@
+name: Marcus Ijeoma
+career: Ship Captain
+appearance: >
+  Weathered face, close-cropped grey beard, a permanent squint from too
+  many years watching instrument panels. Wears his uniform jacket even
+  off-duty.
+
+attributes:
+  Strength: 3
+  Agility: 3
+  Wits: 4
+  Empathy: 4
+
+skills:
+  Piloting: 4
+  Command: 3
+  Observation: 3
+  Comtech: 2
+  Survival: 2
+
+health:
+  current: 3
+  max: 3
+
+stress:
+  current: 2
+
+conditions:
+  Starving: no
+  Dehydrated: no
+  Exhausted: no
+  Freezing: no
+
+talent:
+  name: Steady Hand
+  description: >
+    When pushing a Piloting roll during an emergency maneuver or combat,
+    Ijeoma pays no Stress point for the push.
+
+agenda: >
+  Get the ship down in one piece despite the autopilot fault, finish the
+  inspection, and get everyone back into hypersleep before LV-845 becomes
+  his problem for longer than it has to be.
+
+buddy: Talia Reyes
+rival: Adrienne Castellan
+
+sigitem: >
+  A worn captain's cap handed down from the ship's previous master, kept
+  long after regulation said to retire it.
+
+gear:
+  - Sidearm
+  - Full-access override keycard
+  - Headset radio
+  - Ship's logbook
+
+cash: 500 credits
+
+notes: >
+  Second command he's held for WY-Corp. First one ended with a liaison
+  filing a report that still follows him. He watches Castellan's terminal
+  a little too closely.

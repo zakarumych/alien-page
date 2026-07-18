@@ -1,0 +1,63 @@
+name: Dr. Felix Novak
+career: Science Officer
+appearance: >
+  Lanky, ink-stained fingers, glasses held together with tape at one
+  hinge, talks to samples in the lab like they can answer back.
+
+attributes:
+  Strength: 2
+  Agility: 3
+  Wits: 5
+  Empathy: 4
+
+skills:
+  Observation: 4
+  Comtech: 3
+  Medical Aid: 2
+  Survival: 2
+  Manipulation: 2
+
+health:
+  current: 2
+  max: 2
+
+stress:
+  current: 2
+
+conditions:
+  Starving: no
+  Dehydrated: no
+  Exhausted: no
+  Freezing: no
+
+talent:
+  name: Hyper Fixated
+  description: >
+    Once per scene, Novak may reroll a failed Observation or Comtech
+    check related to whatever he's currently studying.
+
+agenda: >
+  Quietly hopes four years of silence means something more interesting
+  than a dead antenna — and means to be first through the door with a
+  sample kit if it does.
+
+buddy: Adrienne Castellan
+rival: Priya Anand
+
+sigitem: >
+  A field journal crammed with unpublished notes on xenobiology, never
+  shown to anyone outside a locked terminal.
+
+gear:
+  - Sample collection kit
+  - Tablet
+  - Specimen containers
+  - UV inspection light
+  - Notebook and pens
+
+cash: 300 credits
+
+notes: >
+  Signed on for "routine survey work." The contract clause about
+  containment protocols says otherwise. He hasn't mentioned that part to
+  the crew.

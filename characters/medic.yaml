@@ -1,0 +1,63 @@
+name: Priya Anand
+career: Medical Officer
+appearance: >
+  Small, precise movements, dark circles from too many night shifts,
+  keeps her sleeves rolled to the elbow even in the cold sections of the
+  ship.
+
+attributes:
+  Strength: 2
+  Agility: 3
+  Wits: 4
+  Empathy: 5
+
+skills:
+  Medical Aid: 4
+  Observation: 3
+  Comtech: 2
+  Manipulation: 2
+  Command: 1
+
+health:
+  current: 2
+  max: 2
+
+stress:
+  current: 2
+
+conditions:
+  Starving: no
+  Dehydrated: no
+  Exhausted: no
+  Freezing: no
+
+talent:
+  name: Combat Medic
+  description: >
+    Treating a Critical Injury under fire only takes a Fast Action
+    instead of a Slow Action for Anand.
+
+agenda: >
+  A week isn't enough to recover from seventeen months under. She means
+  to log every crew member's post-hypersleep readings before Command
+  calls them fit to land — and brace for whatever state the colonists
+  are in, if they're in any state at all.
+
+buddy: Denny Whitlock
+rival: Adrienne Castellan
+
+sigitem: >
+  A stethoscope that belonged to her late mentor, kept in working order
+  well past its service life.
+
+gear:
+  - Medkit
+  - Stimpacks x3
+  - Medical scanner
+  - Painkillers
+
+cash: 220 credits
+
+notes: >
+  Blames the liaison's office for the last supply requisition getting
+  quietly denied. Hasn't said so to Castellan's face. Yet.

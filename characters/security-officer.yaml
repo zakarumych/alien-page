@@ -1,0 +1,62 @@
+name: Talia Reyes
+career: Security Officer
+appearance: >
+  Compact, coiled muscle under a scuffed duty vest, buzzed hair, a habit
+  of standing where she can see every exit in a room.
+
+attributes:
+  Strength: 4
+  Agility: 4
+  Wits: 3
+  Empathy: 3
+
+skills:
+  Ranged Combat: 4
+  Close Combat: 3
+  Observation: 3
+  Command: 2
+  Stamina: 2
+
+health:
+  current: 4
+  max: 4
+
+stress:
+  current: 2
+
+conditions:
+  Starving: no
+  Dehydrated: no
+  Exhausted: no
+  Freezing: no
+
+talent:
+  name: Rapid Response
+  description: >
+    Once per scene, when combat breaks out unexpectedly, Reyes may act
+    immediately regardless of normal initiative order.
+
+agenda: >
+  Four years of dead air isn't an antenna problem. She means to go down
+  armed and assume the worst until the colony proves her wrong.
+
+buddy: Marcus Ijeoma
+rival: Grant Okafor
+
+sigitem: >
+  A monogrammed shock baton, a graduation gift from the academy she
+  almost didn't finish.
+
+gear:
+  - Pump shotgun
+  - Riot vest
+  - Handcuffs
+  - Motion tracker
+  - Sidearm
+
+cash: 200 credits
+
+notes: >
+  Requested this posting personally after her last precinct rotation went
+  quiet in a way she still won't discuss. Trusts the captain. Trusts
+  almost nobody else.
